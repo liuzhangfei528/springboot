@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span th:text="${film}"></span><br/>
+    <span th:text="电影，+${film}"></span><br/>
+    <span th:text="|电影：${film}|"></span><br/>
+    <hr/>
+
+    username:<span th:text="${user.username}"></span><br/>
+    password:<span th:text="${user.password}"></span>
+
+    <hr/>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>id</th>
+            <th>username</th>
+            <th>password</th>
+        </tr>
+        <tr th:each="u:${users}">
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.username}"></td>
+            <td th:text="${u.password}"></td>
+        </tr>
+    </table>
+
+    <hr/>
+    <!--成立-->
+    <span th:if="${money > 10}">大于10</span><br/>
+    <!--不成立-->
+    <span th:unless="${money < 10}">大于10</span><br/>
+    <span th:text="${money > 100 ? '大于100':'小于100'}"></span>
+
+</body>
+</html>
