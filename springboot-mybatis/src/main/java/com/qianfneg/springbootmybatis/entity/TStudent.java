@@ -5,7 +5,7 @@ import javax.validation.constraints.*;
 public class TStudent {
     private Integer id;
 
-    @NotNull
+    @NotBlank(message = "用户名不能为空")
     private String sname;
 
     @Pattern(regexp = "^1(3|4|5|7|8)\\d{9}$",message = "手机号格式错误")
