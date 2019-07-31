@@ -23,6 +23,7 @@ public class UserController {
       return  userService.getUserById(id);
     }
 
-
-
+    public void test(){
+        String ffff="fffff";
+    }
 }
